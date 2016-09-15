@@ -1,7 +1,7 @@
 import pandas as pd
 
 #read into data
-data=pd.read_csv(r'/home/zyybear/Desktop/UNH/RS_Kaggle/train/Complete_Train.csv')
+data=pd.read_csv(r'mypath/Complete_Train.csv')
 
 #change salesmeans to 0 if store is closed
 data.ix[data.Open==0,"SalesMean"]=0
