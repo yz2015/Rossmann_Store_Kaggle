@@ -70,7 +70,7 @@ XGB_model = xgb.train(params, xgtrain,num_trees,feval=myRMSPE_xg,
                      verbose_eval=True)
 preds = XGB_model.predict(xgb.DMatrix(myt))
 preds =np.expm1(preds)
-test=pd.read_csv(r'/home/zyybear/Desktop/UNH/RS_Kaggle/test/test.csv')
+test=pd.read_csv(r'path/test.csv')
 result = pd.DataFrame({'Id': test.Id})
 result['Sales']=preds
 result.to_csv('XGB_12-13_5.csv', index=False, sep=',')
