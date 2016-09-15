@@ -25,8 +25,8 @@ def myRMSPE_xg(yhat,y):
     
     return "rmspe", r
     
-train=pd.read_csv(r'/home/zyybear/Desktop/UNH/RS_Kaggle/train/train_FE0.csv')
-test=pd.read_csv('/home/zyybear/Desktop/UNH/RS_Kaggle/test/test_FE0.csv')   
+train=pd.read_csv(r'path/train_FE0.csv')
+test=pd.read_csv('path/test_FE0.csv')   
 
 train.drop(['Store','Customers','Date','WeekOfYear'],axis=1,inplace=True)
 test.drop(['Id','Date','Store','WeekOfYear'],axis=1,inplace=True)
